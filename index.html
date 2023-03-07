@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML+CSS Click Event</title>
+  <style>
+
+    .toggle-message-btn {
+      margin: 50px auto;
+      padding: 10px;
+      display: block;
+      cursor: pointer;
+      pointer-events: none;
+    }
+
+    .message {
+      width: 200px;
+      background-color: orangered;
+      margin: 10px auto;
+      padding: 10px;
+      text-align: center;
+      border: 4px solid #000;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .checkbox:checked ~ .message {
+      opacity: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="show-message" class="checkbox" hidden>
+
+  <label for="show-message">
+    <button class="toggle-message-btn">Toggle Show/Hide</button>
+  </label>
+
+  <div class="message">
+    <p>Peek-a-Boo!</p>
+  </div>
+
+</body>
+</html>
